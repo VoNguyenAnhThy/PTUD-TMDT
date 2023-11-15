@@ -1011,7 +1011,7 @@ footer ul li {
     th:last-child{
         text-align: right;
     }
-
+ /* end Cart Items */
     /* responsive */
 
 @media only screen and (max-width: 1280px) {

@@ -452,7 +452,7 @@ ul.devided > li:last-child {
 
 .promotion-box {
     display: flex;
-    background-color:#FF7300;
+    background-color: var(--third-bg-color);
     position: relative;
 }
 

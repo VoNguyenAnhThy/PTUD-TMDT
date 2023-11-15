@@ -1,66 +1,66 @@
 let products = [
     {
-        name: 'JBL E55BT KEY BLACK',
+        name: 'Mẫu thiết kế áo bóng đá SMD001',
         image1: './images/Bóng đá 1.jpg',
         image2: './images/Bóng đá 4.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'JBL JR 310BT',
+        name: 'Mẫu thiết kế áo bóng chuyền SMC001',
         image1: './images/Bóng chuyền 1.jpg',
         image2: './images/Bóng chuyền 4.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'JBL TUNE 750BTNC',
+        name: 'Mẫu thiết kế áo bóng rổ SMR001',
         image1: './images/Bóng rổ 1.jpg',
         image2: './images/Bóng rổ 2.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'JBL Tune 220TWS',
+        name: 'Mẫu thiết kế áo bóng chuyền SMC002',
         image1: './images/Bóng chuyền 3.jpg',
         image2: './images/Bóng chuyền 2.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'JBL Horizon',
+        name: 'Mẫu thiết kế áo cầu lông SML001',
         image1: './images/Cầu lông 1.jpg',
         image2: './images/Cầu lông 2.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'UA Project Rock',
+        name: 'Mẫu thiết kế áo bóng đá SMD002',
         image1: './images/Bóng đá 3.jpg',
         image2: './images/Bóng đá 5.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'JBL Tune 220TWS',
+        name: 'Mẫu thiết kế áo bóng đá SMD003',
         image1: './images/Bóng đá 6.jpg',
         image2: './images/Bóng đá 7.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'JBL Horizon',
+        name: 'Mẫu thiết kế áo bóng rổ SMR002',
         image1: './images/Bóng rổ 4.jpg',
         image2: './images/Bóng rổ 5.jpg',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
     {
-        name: 'UA Project Rock',
+        name: 'Mẫu thiết kế áo cầu lông SML002',
         image1: './images/Cầu lông 4.png',
         image2: './images/Cầu lông 3.png',
-        old_price: '400',
-        curr_price: '300'
+        old_price: '400.000đ',
+        curr_price: '250.000đ'
     },
 ]
 

@@ -452,7 +452,7 @@ ul.devided > li:last-child {
 
 .promotion-box {
     display: flex;
-    background-color: var(--third-bg-color);
+    background-color:#FF7300;
     position: relative;
 }
 
@@ -463,6 +463,7 @@ ul.devided > li:last-child {
 
 .promotion-box .text h3 {
     font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .promotion-box .text button {

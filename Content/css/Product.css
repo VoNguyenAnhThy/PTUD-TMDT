@@ -1,0 +1,83 @@
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.product-card {
+    position: relative;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden; /* Ẩn phần vượt ra khỏi khung */
+}
+
+.product-images {
+    position: relative;
+    width: 100%;
+    height: 272px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+    .product-images img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        object-fit: cover; /* Đảm bảo hình ảnh không bị kéo dài */
+        transition: transform 0.5s ease-in-out;
+    }
+
+        .product-images img:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+.product-card:hover .product-images img {
+    transform: translateX(-100%);
+}
+
+/*Điều chỉnh nút bấm buy-button */
+.buy-button {
+    background-color: #FF7300;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.5s; /* Sử dụng box-shadow thay vì border */
+    margin-top: 15px;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+    .buy-button:hover {
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Tạo hiệu ứng giống border */
+        color: #000000;
+    }
+/*Hết điều chỉnh nút bấm buy-button */
+
+
+.product-info {
+    margin-top: 10px;
+}
+
+    .product-info p {
+        margin-top: 10px;
+    }

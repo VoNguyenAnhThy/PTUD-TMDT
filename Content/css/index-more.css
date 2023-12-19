@@ -1,0 +1,336 @@
+/*Đánh giá khách hàng*/
+.section-bgrating{
+    padding: 40px 0;
+    background: #f0f0f0;
+    color: #434343;
+    text-align: center;
+}
+.bgrating{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+.underline-bgr{
+    width:160px;
+    height: 5px;
+    background: #ff9933;
+    margin: 25px auto;
+  }
+.row-bgr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.column-bgr{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.column-child-bgr {
+    padding: 30px;
+    background-color: #FFFFFF;
+}
+.column-child-bgr img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name-bgr{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.rate-bgr{
+    color:#ff9933;
+    margin-bottom: 20px;
+}
+/* Hiệu ứng zoom ảnh khi rê chuột lên avt */
+.avatar-bgr img { 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà */
+}
+
+.avatar-bgr img:hover {
+        transform: scale(1.2); /* Phóng to ảnh khi di chuột qua */
+}
+
+@media screen and (max-width:750px){
+    .column-bgr{
+        flex:100%;
+        width: 100%;
+    }
+}
+
+
+/*Why S-me*/
+.why-me {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Palatino Linotype", sans-serif;
+}
+.section-bgservice {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.bgservice {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px 0px;
+    text-align: center;
+}
+.underline-bgs {
+    width: 160px;
+    height: 5px;
+    background: #ff9933;
+    margin: 25px auto;
+}
+
+.row-bgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+.column-bgs {
+    width: 100%;
+    padding: 0 1em 1em 1em;
+    text-align: center;
+}
+
+.card-bgs {
+    width: 100%;
+    height: 100%;
+    padding: 2em 1.5em;
+    background: linear-gradient(#ffffff 50%, #ff9933 50%);
+    background-size: 100% 200%;
+    background-position: 0 2.5%;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.bgservice h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f194c;
+    margin: 1em 0;
+}
+
+.bgservice p {
+    color: #575a7b;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+}
+
+.icon-wrapper-bgs {
+    background-color: #ff9933;
+    position: relative;
+    margin: auto;
+    font-size: 30px;
+    height: 2.5em;
+    width: 2.5em;
+    color: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+.card-bgs:hover {
+    background-position: 0 100%;
+}
+
+    .card-bgs:hover .icon-wrapper-bgs {
+        background-color: #ffffff;
+        color: #ff9933;
+    }
+
+    .card-bgs:hover h3 {
+        color: #ffffff;
+    }
+
+    .card-bgs:hover p {
+        color: #f0f0f0;
+    }
+    @media screen and (min-width: 768px) {
+        .section-bgservice {
+          padding: 0 1em;
+          margin-top: -200px; /* Kéo tiêu đề Why Sme lên xíu*/
+        }
+        .columnbgs {
+          flex: 0 50%;
+          max-width: 50%;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        .section-bgservice {
+          padding: 1em 3em;
+        }
+        .column-bgs {
+          flex: 0 0 33.33%;
+          max-width: 33.33%;
+        }
+      }
+
+
+/*Phần đếm ngược*/
+.section-coutdown-1,
+.section-coutdown-2,
+.section-countdown {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    font-family: "Palatino Linotype", sans-serif;
+}
+
+    .section-countdown .image-countdown {
+        position: absolute;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1; /* nền background nằm phía sau các phần tử khác */
+    }
+
+    .section-coutdown-1 h1 {
+        font-weight: normal;
+        font-size: 40px;
+    }
+
+.countdown {
+    display: flex;
+    transform: scale(2); /*phóng to gấp 2 kích thước ban đầu của phần tử */
+}
+
+.time-cd {
+    height: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+    .time-cd h2 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1;
+        margin: 0 0 5px;
+    }
+
+.email-content-cd {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 500px;
+}
+
+.email-content-cd {
+    font-size: 20px;
+}
+
+.input-box-cd {
+    position: relative;
+    height: 40px;
+    width: 100%;
+}
+
+    .input-box-cd input,
+    .input-box-cd button {
+        height: 35px;
+    }
+
+    .input-box-cd input {
+        width: 271px;
+    }
+
+    .input-box-cd button {
+        white-space: nowrap;
+        padding: 0 20px;
+    }
+
+input::placeholder {
+    font-family: "Palatino Linotype", sans-serif;
+}
+
+.input-box-cd button {
+    font-family: "Palatino Linotype", sans-serif;
+    background-color: #FF7300;
+    color: #000000;
+    border: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Sử dụng box-shadow thay vì border */
+}
+
+    .input-box-cd button:hover {
+        background-color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Tạo hiệu ứng giống border */
+        color: #000000;
+    }
+
+/* responsive countdown */
+@media (max-width: 768px) {
+    .section-coutdown-1 h1 {
+        font-size: 24px; /* Điều chỉnh kích thước chữ cho màn hình nhỏ hơn */
+    }
+
+    .countdown {
+        transform: scale(1); /* Đặt lại tỉ lệ scale cho màn hình nhỏ hơn */
+        flex-direction: column; /* Xếp các phần tử countdown dọc */
+    }
+
+    .time-cd {
+        height: auto; /* Cho phép chiều cao điều chỉnh dựa trên nội dung */
+        margin: 10px 0; /* Thêm khoảng cách giữa các phần tử countdown */
+    }
+
+        .time-cd h2 {
+            font-size: 24px; /* Điều chỉnh kích thước chữ cho màn hình nhỏ hơn */
+        }
+
+    .email-content-cd {
+        width: 100%; /* Làm cho nội dung email chiếm toàn bộ chiều rộng trên màn hình nhỏ hơn */
+        margin-top: 10px; /* Thêm khoảng cách giữa email content và countdown */
+    }
+
+    .input-box-cd input {
+        width: 100%; /* Làm cho hộp nhập chiếm toàn bộ chiều rộng trên màn hình nhỏ hơn */
+    }
+
+    .input-box-cd button {
+        margin-top: 10px; /* Thêm khoảng cách giữa ô nhập và nút */
+    }
+
+    @media (max-width: 1700px) {
+        .image-countdown {
+            height: 130%;
+        }
+    }
+    /* Điều chỉnh kích thước chữ cho màn hình nhỏ hơn */
+    @media (max-width: 500px) {
+        .section-coutdown-1 h1 {
+            font-size: 20px;
+        }
+
+        .time-cd h2 {
+            font-size: 18px;
+        }
+
+        .email-content-cd {
+            font-size: 16px;
+        }
+    }
+}

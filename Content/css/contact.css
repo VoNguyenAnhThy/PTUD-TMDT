@@ -1,0 +1,85 @@
+/*contact info và map*/
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+    margin: 20%;
+}
+
+.contact-form {
+    flex: 1;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.google-map {
+    margin-top: 20px;
+    width: 450px;
+    margin-right: 20%;
+}
+
+.contact-item {
+    margin-top: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-container {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+form {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+    form h3 {
+        color: #F15412;
+        font-weight: 800;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    form input, form textarea {
+        border: 0;
+        margin: 10px 0;
+        padding: 20px;
+        outline: none;
+        background: #f4f5f9;
+    }
+
+    form button {
+        background-color: #F15412;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+@media (max-width: 750px) {
+    .google-map {
+        width: 300px;
+        height: auto;
+        margin: auto;
+    }
+}
+  

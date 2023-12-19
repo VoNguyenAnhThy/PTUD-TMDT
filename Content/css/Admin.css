@@ -1,0 +1,28 @@
+/*Điều chỉnh bảng trong Admin*/
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    width: 70%;
+    background-color: #fde0c9;
+    
+}
+table, th, td {
+    border: 1px solid #ff7300;
+    border-radius: 10px;
+
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/*reponsive bảng trong Admin*/
+@media (max-width: 750px) {
+    .detail-table {
+      grid-template-columns: 1fr;
+    }
+    .detail-tables {
+      overflow-x: auto;
+    }
+  }

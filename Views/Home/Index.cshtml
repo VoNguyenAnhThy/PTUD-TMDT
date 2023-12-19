@@ -1,0 +1,462 @@
+﻿@model IEnumerable<S_me.Models.Sanpham>
+
+@{
+    ViewBag.Title = "Home";
+}
+<main>
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    <link href="~/Content/css/grid.css" rel="stylesheet" />
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+    <link href="~/Content/css/index-more.css" rel="stylesheet" />
+
+    <!-- hero section -->
+    <div class="hero">
+        <div class="slider">
+            <div class="container">
+                <!-- slide item -->
+                <div class="slide active">
+                    <div class="info">
+                        <div class="info-content">
+                            <h3 class="top-down">
+                                Đồ bóng rổ Thang Long Warriors VBA 2021
+                            </h3>
+                            <h2 class="top-down trans-delay-0-2">
+                                Thiết kế độc đáo
+                            </h2>
+                            <p class="top-down trans-delay-0-4">
+                                Với chất liệu vải mè thể thao cao cấp, co giãn tốt, thấm hút mồ hôi, chống nhăn, bền màu. Đồng thời sản phẩm có khả năng kháng khuẩn, chống tia UV. Đây sẽ là một lựa chọn vô cùng thích hợp cho các bạn trẻ năng động nhiệt huyết với môn thể thao bóng rổ
+                            </p>
+                            <div class="top-down trans-delay-0-6">
+                                <button class="btn-flat btn-hover">
+                                    @Html.ActionLink("Xem ngay", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img top-down">
+                        <img src="~/Content/images/8. BR.jpg" alt="">
+                    </div>
+                </div>
+                <!-- end slide item -->
+                <!-- slide item -->
+                <div class="slide">
+                    <div class="info">
+                        <div class="info-content">
+                            <h3 class="top-down">
+                                Đồ bóng rổ Hanoi Buffaloes VBA 2021
+                            </h3>
+                            <h2 class="top-down trans-delay-0-2">
+                                Phong cách tự tin
+                            </h2>
+                            <p class="top-down trans-delay-0-4">
+                                Thông số may phù hợp dáng người Châu Á lên form gọn gàng năng động. Với công nghệ in chuyển nhiệt, mực in đạt tiêu chuẩn Châu Âu (chứng nhận Eco Passport). Đảm bảo mang đến cảm giác thoải mái, tự tin ra trận
+                            </p>
+                            <div class="top-down trans-delay-0-6">
+                                <button class="btn-flat btn-hover">
+                                    @Html.ActionLink("Xem ngay", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img right-left">
+                        <img src="~/Content/images/7. BR.jpg" alt="">
+                    </div>
+                </div>
+                <!-- end slide item -->
+                <!-- slide item -->
+                <div class="slide">
+                    <div class="info">
+                        <div class="info-content">
+                            <h3 class="top-down">
+                                Đồ bóng rổ Cantho Catfish VBA 2021
+                            </h3>
+                            <h2 class="top-down trans-delay-0-2">
+                                Chiến đấu hết mình
+                            </h2>
+                            <p class="top-down trans-delay-0-4">
+                                Kỹ thuật may mặc đạt chuẩn xuất khẩu, đường may 3 kim chắc chăn, may móc xích giữ thân áo, dằn bo ở các góc áo hạn chết tuột chỉ. Với chất lượng đường may đảm bảo phù hợp, tạo cảm giác thoải mái, tự tin "chinh chiến"
+                            </p>
+                            <div class="top-down trans-delay-0-6">
+                                <button class="btn-flat btn-hover">
+                                    @Html.ActionLink("Xem ngay", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img left-right">
+                        <img src="~/Content/images/19.BR.jpg" alt="">
+                    </div>
+                </div>
+                <!-- end slide item -->
+            </div>
+            <!-- slider controller -->
+            <button class="slide-controll slide-next">
+                <i class='bx bxs-chevron-right'></i>
+            </button>
+            <button class="slide-controll slide-prev">
+                <i class='bx bxs-chevron-left'></i>
+            </button>
+            <!-- end slider controller -->
+        </div>
+    </div>
+    <!-- end hero section -->
+    <!-- promotion section -->
+    <div class="promotion">
+        <div class="row">
+            <div class="col-4 col-md-12 col-sm-12">
+                <div class="promotion-box">
+                    <div class="text">
+                        <h3>Bóng đá</h3>
+                        <button class="btn-flat btn-hover">
+                            @Html.ActionLink("Bộ sưu tập", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                        </button>
+                    </div>
+                    <img src="~/Content/images/1. Đá bóng.remove.png" alt="">
+                </div>
+            </div>
+            <div class="col-4 col-md-12 col-sm-12">
+                <div class="promotion-box">
+                    <div class="text">
+                        <h3>Cầu lông</h3>
+                        <button class="btn-flat btn-hover">
+                            @Html.ActionLink("Bộ sưu tập", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                        </button>
+                    </div>
+                    <img src="~/Content/images/12.1. Cầu lông.remove.png" alt="">
+                </div>
+            </div>
+            <div class="col-4 col-md-12 col-sm-12">
+                <div class="promotion-box">
+                    <div class="text">
+                        <h3>Esport</h3>
+                        <button class="btn-flat btn-hover">
+                            @Html.ActionLink("Bộ sưu tập", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                        </button>
+                    </div>
+                    <img src="~/Content/images/14. Esport.remove.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end promotion section -->
+    <!-- Danh sách khuyến mãi -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Khuyến Mãi Mới Nhất</h2>
+            </div>
+            <div class="row">
+                @foreach (var item in Model.Take(8))
+                {
+                    <div class="col-3 col-md-6 col-sm-12">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture)" alt="Product Image 1" />
+                                <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture2)" alt="Product Image 2" />
+                            </div>
+                            <div class="product-card-info">
+                                <div class="product-btn">
+                                    <button class="btn-flat btn-hover btn-shop-now">
+                                        @Html.ActionLink("Xem ngay", "Chitietsanpham", new { id = item.SpID })
+                                    </button>
+                                    <button class="btn-flat btn-hover btn-cart-add">
+                                        <a href="@Url.Action("Themvaogiohang", new { id = item.SpID })"><i class='bx bxs-cart-add'></i></a>
+                                    </button>
+                                    <button class="btn-flat btn-hover btn-cart-add">
+                                        <i class='bx bxs-heart'></i>
+                                    </button>
+                                </div>
+                                <div class="product-card-name">
+                                    @Html.DisplayFor(modelItem => item.ProductName)
+                                </div>
+                                <div class="product-card-price">
+                                    <span><del>@Html.DisplayFor(modelItem => item.Price)</del></span>
+                                    <span class="curr-price">250.000 VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <center>
+                <div class="section-footer btn-flat btn-hover">
+                    @Html.ActionLink("Xem tất cả", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                </div>
+            </center>
+        </div>
+    </div>
+    <!-- Hết danh sách KM -->
+    <!--Đếm ngược-->
+    <br>
+    <div class="section-countdown">
+        <img src="~/Content/images/poster.png" alt="Background Countdown" class="image-countdown">
+        <div class="section-coutdown-1">
+            <h1>KHUYẾN MÃI KẾT THÚC SAU</h1>
+
+            <div id="countdown" class="countdown">
+                <div class="time-cd">
+                    <h2 id="days">00</h2>
+                    <small>Ngày</small>
+                </div>
+
+                <div class="time-cd">
+                    <h2 id="hours">00</h2>
+                    <small>Giờ</small>
+                </div>
+
+                <div class="time-cd">
+                    <h2 id="minutes">00</h2>
+                    <small>Phút</small>
+                </div>
+
+                <div class="time-cd">
+                    <h2 id="seconds">00</h2>
+                    <small>Giây</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-countdown-2">
+            <div class="email-content-cd">
+                <p> Nhập mail để nhận thông báo khuyến mãi mới nhất</p>
+                <br>
+                <div class="input-box-cd">
+                    <input type="email" placeholder="Nhập email của bạn">
+                    <button>Thông báo cho tôi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Kết thúc đếm ngược-->
+    <!-- Danh sách KM đặc biệt -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>SẢN PHẨM KHUYẾN MÃI BÁN CHẠY</h2>
+            </div>
+            <div class="row" >
+                @foreach (var item in Model.OrderByDescending(x => x.SpID).Take(8))
+                {
+                    <div class="col-3 col-md-6 col-sm-12">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture)" alt="Product Image 1" />
+                                <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture2)" alt="Product Image 2" />
+                            </div>
+                            <div class="product-card-info">
+                                <div class="product-btn">
+                                    <button class="btn-flat btn-hover btn-shop-now">
+                                        @Html.ActionLink("Xem ngay", "Chitietsanpham", "Sanphams", new { id = item.SpID })
+                                    </button>
+                                    <button class="btn-flat btn-hover btn-cart-add">
+                                        <i class='bx bxs-cart-add'></i>
+                                    </button>
+                                    <button class="btn-flat btn-hover btn-cart-add">
+                                        <i class='bx bxs-heart'></i>
+                                    </button>
+                                </div>
+                                <div class="product-card-name">
+                                    @Html.DisplayFor(modelItem => item.ProductName)
+                                </div>
+                                <div class="product-card-price">
+                                    <span><del>@Html.DisplayFor(modelItem => item.Price)</del></span>
+                                    <span class="curr-price">250.000 VND</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <center>
+                <div class="section-footer btn-flat btn-hover">
+                    @Html.ActionLink("Xem tất cả", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                </div>
+            </center>
+        </div>
+    </div>
+    <!-- Hết KM đặc biệt -->
+    <!--Start WHY SME-->
+    <div class="section-bgservice why-me">
+        <div class="bgservice">
+            <div class="section-header">
+                <h2>Vì sao chọn S-me</h2>
+            </div>
+            <div class="underline-bgs"></div>
+            <div class="row-bgs">
+                <div class="column-bgs">
+                    <div class="card-bgs">
+                        <div class="icon-wrapped-bgs">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h3>Miễn phí vận chuyển</h3>
+                        <p>Miễn phí vận chuyển cho đơn hàng từ 500.000 VND</p>
+                    </div>
+                </div>
+                <div class="column-bgs">
+                    <div class="card-bgs">
+                        <div class="icon-wrapped-bgs">
+                            <i class="fa-brands fa-rocketchat"></i>
+                        </div>
+                        <h3>Chăm sóc khách hàng</h3>
+                        <p>Đội ngũ nhân viên tậm tâm luôn sẵn sàng hỗ trợ giải quyết mọi thắc mắc, khiếu nại của khách hàng</p>
+                    </div>
+                </div>
+                <div class="column-bgs">
+                    <div class="card-bgs">
+                        <div class="icon-wrapped-bgs">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <h3>Tri ân khách hàng</h3>
+                        <p>Các ưu đãi đặc biệt cho từng cấp độ khách hàng</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End WHY SME-->
+    <!-- Sản phẩm đặc biệt -->
+    <div class="bg-second">
+        <div class="section container">
+            <div class="row">
+                <div class="col-4 col-md-4">
+                    <div class="sp-item-img">
+                        <img src="~/Content/images/13. Cầu lông.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-7 col-md-8">
+                    <div class="sp-item-info">
+                        <div class="sp-item-name">Áo Cầu Lông Yonex</div>
+                        <p class="sp-item-description">
+                            Nếu người chơi cầu lông nào không am hiểu nhiều về áo cầu lông, thì áo cầu lông Yonex ACL11 chính là sự lựa chọn thông minh dành cho bạn. Áo cầu lông Yonex ACL11 dành cho nam là mẫu áo được in nhiệt hoàn toàn với màu trắng chủ đạo là trắng và được thiết kế lên chiếc áo trơn. Thông thường thì những chiếc áo chuyển nhiệt này được mượn ý tưởng từ áo chính hãng, tuy nhiên giá cả được bán ra lại rất cân đối và vừa tầm với người sử dụng.
+                        </p>
+                        <button class="btn-flat btn-hover"><a href="./products.html"><span>xem ngay</span> </a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hết sản phẩm đặc biệt -->
+    <!-- blogs -->
+    <div class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bài viết</h2>
+            </div>
+            <div class="blog">
+                <div class="blog-img">
+                    <img src="~/Content/images/1. Blog.jpg" alt="">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-title">
+                        Cách chọn trang phục thể thao phù hợp với từng hoạt động
+                    </div>
+                    <div class="blog-preview">
+                        Các hoạt động thể thao luôn đòi hỏi con người phải vận động nhiều nên việc lựa chọn những bộ quần áo mang lại sự thoải mái, thấm hút mồ hôi là rất cần thiết. Nếu bạn còn đang băn khoăn không biết chọn đồ như thế nào cho hợp lý nhất, cùng tìm hiểu cách lựa chọn trang phục hoạt động thể thao lý tưởng trong bài viết dưới đây.
+                    </div>
+                </div>
+            </div>
+            <div class="blog row-revere">
+                <div class="blog-img">
+                    <img src="~/Content/images/Blog 2.png" alt="">
+                </div>
+                <div class="blog-info">
+                    <div class="blog-title">
+                        Xu hướng thời trang thể thao thu đông 2023
+                    </div>
+                    <div class="blog-preview">
+                        Xu hướng thời trang thường lặp lại sau 10 - 20 năm. Ngay bây giờ, những xu hướng và nhất là màu sắc từ năm 1980-1990 đang được yêu thích trở lại.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hết blogs -->
+    <!--Đánh giá khách hàng-->
+    <div class="section-bgrating">
+        <!--Toàn bộ background-->
+        <div class="bgrating">
+            <!--Bao gồm tất cả các phàn tử title và đối tượng KH-->
+            <h1> Đánh giá khách hàng </h1>
+            <div class="underline-bgr"></div> <!--Dấu gạch chân phía dưới title-->
+            <div class="row-bgr">
+                <!--Phần tử dòng ngang-->
+
+                <div class="column-bgr">
+                    <!--Phần tử cột đứng-->
+                    <div class="column-child-bgr">
+                        <!--Phần tử cột riêng lẻ-->
+                        <div class="avatar-bgr">
+                            <img src="~/Content/images/khoai.jpg" alt="Khoai Lang Thang">
+                        </div>
+                        <div class="name-bgr"> <b>Khoai Lang Thang</b></div> <!--Tên khách hàng 1-->
+                        <div class="rate-bgr">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div> <!--Đánh giá sao-->
+                        <div class="comment-bgr">
+                            <p>
+                                Sản phẩm của S-me thật sự rất chất lượng, đồ thể thao mặc thoải mái, không bị bí mồ hôi. Sẽ tiếp tục ủng hộ ^^
+                            </p>
+                        </div> <!--Bình luận KH-->
+                    </div>
+                </div>
+                <div class="column-bgr">
+                    <!--Phần tử cột đứng-->
+                    <div class="column-child-bgr">
+                        <!--Phần tử cột riêng lẻ-->
+                        <div class="avatar-bgr">
+                            <img src="~/Content/images/hà.jpg" alt="Khoai Lang Thang">
+                        </div>
+                        <div class="name-bgr"><b>Nguyên hà</b></div> <!--Tên khách hàng 2-->
+                        <div class="rate-bgr">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div> <!--Đánh giá sao-->
+                        <div class="comment-bgr">
+                            <p>
+                                Mình mua cho người yêu, anh ấy thích lắm, mặc thoải mái vận động. Sẽ mua thêm vài bộ nữa cho ẻm. Cảm ơn S-me
+                            </p>
+                        </div> <!--Bình luận KH-->
+                    </div>
+                </div>
+                <div class="column-bgr">
+                    <!--Phần tử cột đứng-->
+                    <div class="column-child-bgr">
+                        <!--Phần tử cột riêng lẻ-->
+                        <div class="avatar-bgr">
+                            <img src="~/Content/images/chan.jpg" alt="Khoai Lang Thang">
+                        </div>
+                        <div class="name-bgr"><b>Chan La Cà</b></div> <!--Tên khách hàng 3-->
+                        <div class="rate-bgr">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div> <!--Đánh giá sao-->
+                        <div class="comment-bgr">
+                            <p>
+                                Mình rất hài lòng về sản phẩm và cách phục vụ rất tận tình của nhân viên. Hy vọng sẽ được đồng hành cùng S-me
+                            </p>
+                        </div> <!--Bình luận KH-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Hết đánh giá khách hàng-->
+
+
+    <script src="~/Scripts/js/index.js"></script>
+    <script src="~/Scripts/js/app.js"></script>
+    <script src="~/Scripts/js/countdown.js"></script>
+
+
+</main>

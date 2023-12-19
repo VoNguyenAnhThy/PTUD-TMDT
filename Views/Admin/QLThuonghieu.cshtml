@@ -1,0 +1,50 @@
+﻿@model IEnumerable<S_me.Models.Thuonghieu>
+
+@{
+    ViewBag.Title = "QLThuonghieu";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+
+<center class="QLChung">
+    <h2>Quản lý Thương hiệu</h2>
+
+    <p>
+        <button class="buy-button">
+            @Html.ActionLink("Tạo mới", "THThem")
+        </button>
+    </p>
+    <div class="container detail-table">
+        <div class="detail-tables">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            <button class="buy-button">@Html.ActionLink("Edit", "THSua", new { id = item.ThuonghieuID })</button>
+                            <br>
+                            <button class="buy-button">@Html.ActionLink("Details", "THChitiet", new { id = item.ThuonghieuID })</button>
+                            <br>
+                            <button class="buy-button">@Html.ActionLink("Delete", "THXoa", new { id = item.ThuonghieuID })</button>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+
+</center>

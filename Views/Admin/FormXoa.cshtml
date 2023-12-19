@@ -1,0 +1,64 @@
+﻿@model S_me.Models.Form
+
+@{
+    ViewBag.Title = "FormXoa";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+<center>
+    <h2>Xóa form</h2>
+
+    <h3>Chắc chắn xóa?</h3>
+    <div>
+        <h4>Form</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerEmail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerPhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerPhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerMessage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerMessage)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default buy-button" /> |
+                <button class="buy-button">
+                    @Html.ActionLink("Back to List", "ViewForm")
+                </button>            </div>
+        }
+    </div>
+</center>

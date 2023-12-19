@@ -1,0 +1,150 @@
+﻿@*@{
+        ViewBag.Title = "Contact";
+    }
+    <main aria-labelledby="title">
+        <h2 id="title">@ViewBag.Title.</h2>
+        <h3>@ViewBag.Message</h3>
+
+        <address>
+            One Microsoft Way<br />
+            Redmond, WA 98052-6399<br />
+            <abbr title="Phone">P:</abbr>
+            425.555.0100
+        </address>
+
+        <address>
+            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+        </address>
+    </main>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Contact Page</title>
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+    <link href="~/Content/css/grid.css" rel="stylesheet" />
+    <link href="~/Content/css/about.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <!-- slogan sport me shine me -->
+    <div class="hero">
+        <div class="slider">
+            <div class="container">
+                <!-- banner -->
+                <div class="slide active">
+                    <div class="info">
+                        <div class="info-content">
+                            <h3 class="top-down">
+                                "Thể thao chất, bạn là duy nhất"
+                            </h3>
+                            <h2 class="top-down trans-delay-0-2">
+                                SPORT ME - SHINE ME
+                            </h2>
+                            <p class="top-down trans-delay-0-4">
+                                Đem lại sự khác biệt, độc đáo và khẳng định cá tính cho người chơi thể thao.
+                                S-me cung cấp các mặt hàng trang phục thi đấu thể thao, thiết kế và in ấn theo yêu cầu với giá cả cạnh tranh và phù hợp với nhu cầu thị trường.
+                            </p>
+                            <div class="top-down trans-delay-0-6">
+                                <button class="btn-flat btn-hover">
+                                    @Html.ActionLink("Shopping thôi!", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-img top-down">
+                        <img src="~/Content/images/Logocollection [QTDA] (4).png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Section giá trị chúng tôi -->
+    <div class="about-promotion">
+        <div class="row">
+            <div class="col-4 col-md-12 col-sm-12">
+                <div class="about-promotion-box">
+                    <div class="text">
+                        <h3>Thiết kế riêng</h3>
+                        <button class="btn-flat btn-hover"><span>Tìm hiểu</span></button>
+                    </div>
+                    <img src="~/Content/images/6.png" alt="">
+                </div>
+            </div>
+            <div class="col-4 col-md-12 col-sm-12">
+                <div class="about-promotion-box" style="background: linear-gradient(to right, #ffffff, #FF7300);">
+                    <div class="text">
+                        <h3>Cam kết chất lượng</h3>
+                        <button class="btn-flat btn-hover"><span>Tìm hiểu</span></button>
+                    </div>
+                    <img src="~/Content/images/7.png" alt="">
+                </div>
+            </div>
+            <div class="col-4 col-md-12 col-sm-12">
+                <div class="about-promotion-box">
+                    <div class="text">
+                        <h3>Phục vụ tận tâm</h3>
+                        <button class="btn-flat btn-hover"><span>Tìm hiểu</span></button>
+                    </div>
+                    <img src="~/Content/images/8.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hết section giá trị -->
+    <!-- câu chuyện của sme (về chúng tôi) -->
+
+    <div class="section">
+        <div class="container">
+            <div class="aboutus-title">
+                <h2>Về chúng tôi</h2>
+            </div>
+            <div class="row">
+                <div class="col-6  col-md-12">
+                    <img id="aboutus_img" src="~/Content/images/1. Blog.jpg" alt="Hình ảnh mô tả">
+                </div>
+                <div class="col-6 col-md-12">
+                    <div class="ourstory">
+                        Là thương hiệu cung cấp trang phục thi đấu thể thao,
+                        cung cấp những sản phẩm mới, độc lạ, chúng tôi mong muốn
+                        nhận được sự hài lòng từ khách hàng, mang đến trải nghiệm
+                        tốt nhất cho người sử dụng, khẳng định chất riêng và sự khác
+                        biệt của từng khách hàng. S-me đồng thời cam kết đem đến
+                        chất lượng cho công cuộc phụng sự cộng đồng thể thao tại
+                        Việt Nam. Qua đó, góp phần xây dựng và phát triển thể thao
+                        nước nhà, hỗ trợ cộng đồng và đem lại cho mỗi thành viên
+                        của mình một môi trường làm việc tốt nhất để phát triển
+                        tài năng nghề nghiệp, đồng thời có một cuộc sống đầy đủ
+                        về vật chất, phong phú về tinh thần.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-bg">
+            <div class="aboutus-title">
+                <h2>Tầm nhìn</h2>
+            </div>
+            <div class="tamnhin">
+                "Trở thành thương hiệu hàng đầu của Việt Nam về sản phẩm thể thao và phát triển cộng đồng thể thao tại Việt Nam"
+            </div>
+        </div>
+        <div class="aboutus-title">
+            <h2>Sứ mệnh</h2>
+        </div>
+        <div class="tamnhin">“Thể thao chất - bạn là duy nhất”</div>
+    </div>
+
+    <script src="~/Scripts/js/index.js"></script>
+    <script src="~/Scripts/js/app.js"></script>
+</body>
+
+</html>

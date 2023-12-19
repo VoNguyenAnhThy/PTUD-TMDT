@@ -1,0 +1,106 @@
+﻿@model S_me.Models.Sanpham
+
+@{
+    ViewBag.Title = "SpChitiet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+<center>
+    <h2>Chi tiết sản phẩm</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DanhmucObj.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DanhmucObj.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThuonghieuObj.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThuonghieuObj.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Summary)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Summary)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Picture)
+            </dd>
+            <dd>
+                <img src="data:image;base64,@System.Convert.ToBase64String(Model.Picture)"
+                     style="width: 200px;" />
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture2)
+            </dt>
+            <dd>
+                <img src="data:image;base64,@System.Convert.ToBase64String(Model.Picture2)"
+                     style="width: 200px;" />
+            </dd>
+
+            <dd>
+                @Html.DisplayFor(model => model.Picture2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Rated)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Rated)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Storage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Storage)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <button class="buy-button">
+            @Html.ActionLink("Edit", "SpSua", new { id = Model.SpID }) |
+        </button>
+        <button class="buy-button">
+            @Html.ActionLink("Back to List", "QLSanpham")
+        </button>
+    </p>
+</center>

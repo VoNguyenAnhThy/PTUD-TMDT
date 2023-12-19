@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+<link href="~/Content/css/grid.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/index-more.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+
+<center>
+    <div class="main">
+        <div class="section-header" style="margin:5px;">
+            <h2>Thống kê</h2>
+            <br>
+        </div>
+        <div class="section-bgservice why-sme" style="width:100%">
+            <div class="bgservice">
+                <div class="underline-bgs"></div>
+                <div class="row-bgs">
+                    <div class="column-bgs">
+                        <div class="card-bgs">
+                            <div class="icon-wrapped-bgs">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <h1>1.289</h1>
+                            <h3>Lượt tiếp cận mới</h3>
+                            <p>Đã có 1.289 lượt tiếp cận mới trong tuần</p>
+                        </div>
+                    </div>
+                    <div class="column-bgs">
+                        <div class="card-bgs">
+                            <div class="icon-wrapped-bgs">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <h1>64</h1>
+                            <h3>Đơn hàng đang giao</h3>
+                            <p>Đã có 64 đơn hàng đang được giao đến khách hàng</p>
+                        </div>
+                    </div>
+                    <div class="column-bgs">
+                        <div class="card-bgs">
+                            <div class="icon-wrapped-bgs">
+                                <i class="fa-regular fa-user"></i>
+                            </div>
+                            <h1>31</h1>
+                            <h3>Khách hàng mới</h3>
+                            <p>Đã có 31 khách hàng mới trong tuần</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thống kê đơn hàng-->
+        <div class="Margin-ana" style="padding-bottom:10px">
+            <div class="section-header" style="margin:5px;">
+                <h2>Thống kê đơn hàng mới nhất</h2>
+            </div>
+            <a href="#" class="buy-button">Xem tất cả</a>
+            <br>
+        </div>
+        <div class="container detail-table">
+            <div class="detail-tables">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Tên khách hàng</td>
+                            <td>Tên sản phẩm</td>
+                            <td>Danh mục</td>
+                            <td>Số lượng</td>
+                            <td>Giá</td>
+                            <td>Tổng tiền</td>
+                            <td>Trạng thái</td>
+                            <td>Thanh toán</td>
+                            <td>Hình ảnh</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>DH64</td>
+                            <td>Y Thanh</td>
+                            <td>Mẫu Thiết Kế Áo Bóng Đá SM001</td>
+                            <td>Áo bóng đá</td>
+                            <td>1</td>
+                            <td>250.000 VNĐ</td>
+                            <td>250.000 VNĐ</td>
+                            <td><span>Đã giao</span></td>
+                            <td><span>Đã thanh toán</span></td>
+                            <td>
+                                <img style="width: 100px;" src="~/Content/images/Bóng đá 4.jpg" alt="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>DH63</td>
+                            <td>Biển Hào</td>
+                            <td>Mẫu thiết kế áo bóng chuyền SMC001</td>
+                            <td>Áo bóng chuyền</td>
+                            <td>2</td>
+                            <td>250.000 VNĐ</td>
+                            <td>500.000 VNĐ</td>
+                            <td><span>Chờ duyệt</span></td>
+                            <td><span>Chưa thanh toán</span></td>
+                            <td>
+                                <img style="width: 100px;" src="~/Content/images/Bóng chuyền 1.jpg" alt="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>DH62</td>
+                            <td>Thư Thanh</td>
+                            <td>Mẫu thiết kế áo khoác Esport SME001</td>
+                            <td>Esport</td>
+                            <td>1</td>
+                            <td>350.000 VNĐ</td>
+                            <td>350.000 VNĐ</td>
+                            <td><span>Hủy</span></td>
+                            <td><span>Chưa thanh toán</span></td>
+                            <td>
+                                <img style="width: 100px;" src="~/Content/images/Esport 1.jpg" alt="">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</center>
+

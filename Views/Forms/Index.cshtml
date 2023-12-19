@@ -1,0 +1,59 @@
+﻿@model IEnumerable<S_me.Models.Form>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerMessage)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerMessage)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.formID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.formID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.formID })
+        </td>
+    </tr>
+}
+
+</table>

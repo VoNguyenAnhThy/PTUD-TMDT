@@ -1,0 +1,73 @@
+﻿@model S_me.Models.Donhang
+
+@{
+    ViewBag.Title = "Themvaogiohang";
+}
+<br>
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+<link href="~/Content/css/grid.css" rel="stylesheet" />
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+
+<center>
+    @{ double Tongtien = 0;}
+    <h2>Giỏ hàng</h2>
+
+    <table id="cartTable" class="table">
+        <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th class="text-right">Giá</th>
+                <th class="text-right">Thành Tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Chitiethoadon in Model.Chitietdonhangs)
+            {
+                <tr>
+                    <td class="text-left">@Chitiethoadon.SanphamObj.ProductName</td>
+                    <td class="text-center">@Chitiethoadon.Soluong</td>
+                    <td class="text-right">@Chitiethoadon.SanphamObj.Price.ToString("c")</td>
+                    <td class="text-right">
+                        @((Chitiethoadon.Soluong *Chitiethoadon.SanphamObj.Price).ToString("c"))
+                    </td>
+                    <td>
+                        <button class="buy-button">
+                            @Html.ActionLink("Xóa", "Xoakhoigiohang",
+                                           new { SpIDs = Chitiethoadon.SpID }, new
+                                           {
+                                               @class = "btn btn-sm btn - warning"
+                                                })
+                        </button>
+                    </td>
+                </tr>
+                Tongtien += (double)(Chitiethoadon.Soluong * Chitiethoadon.SanphamObj.Price);
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Tổng tiền:</td>
+                <td class="text-right">
+                    @Tongtien.ToString("c")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="text-center">
+
+        <button class="buy-button">
+            @Html.ActionLink("Tiếp tục mua", "Index", null, new
+       {
+           @class = "btn btn-primary"
+            })
+        </button>
+
+        <button class="buy-button">
+            @Html.ActionLink("Thanh toán", "Thanhtoan", null, new
+            {
+                 @class = "btn btn-primary"
+            })
+        </button>
+</center>
+</div>

@@ -1,0 +1,104 @@
+﻿@model S_me.Models.Sanpham
+
+@{
+    ViewBag.Title = "SpXoa";
+}
+
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+
+<center>
+    <h2>Xóa sản phẩm</h2>
+
+    <h3>Chắc chắn xóa?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DanhmucObj.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DanhmucObj.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThuonghieuObj.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThuonghieuObj.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Summary)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Summary)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Picture)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Picture2)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Rated)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Rated)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Storage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Storage)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default buy-button" /> |
+                <button class="buy-button">
+                    @Html.ActionLink("Back to List", "QLSanpham")
+                </button>            
+            </div>
+        }
+    </div>
+</center>

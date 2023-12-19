@@ -1,0 +1,60 @@
+﻿@model S_me.Models.Form
+
+@{
+    ViewBag.Title = "FormChitiet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+
+<center>
+    <br><h2>Chi tiết form</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerEmail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerPhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerPhone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerMessage)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerMessage)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <button class="buy-button">
+            @Html.ActionLink("Edit", "FormSua", new { id = Model.formID })
+        </button>        
+        <button class="buy-button">
+            @Html.ActionLink("Back to List", "ViewForm")
+        </button>    
+    </p>
+</center>

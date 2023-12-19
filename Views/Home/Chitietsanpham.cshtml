@@ -1,0 +1,276 @@
+﻿@model S_me.Models.ChitietsanphamViewModel
+
+
+@{
+    ViewBag.Title = "SpChitiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+<!-- boxicons -->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/grid.css" rel="stylesheet" />
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<br>
+<br>
+<center>
+    <h2>Chi tiết sản phẩm</h2>
+</center>
+<!-- product-detail content -->
+<div class="bg-main">
+    <div class="container">
+        <div class="box">
+            <div class="breadcumb">
+                @Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                <span><i class='bx bxs-chevrons-right'></i></span>
+                @Html.ActionLink("Tất cả sản phẩm", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                <span><i class='bx bxs-chevrons-right'></i></span>
+                @Html.ActionLink("Chi tiết sản phẩm", "Chitietsanpham", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+            </div>
+        </div>
+        <div class="row product-row">
+            <div class="col-5 col-md-12">
+                <div class="product-img" id="product-img">
+                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Sanphamchinh.Picture)" alt="Product Image 1" />
+
+                </div>
+                <div class="box">
+                    <div class="product-img-list">
+                        <div class="product-img-item">
+                            <img src="data:image;base64,@System.Convert.ToBase64String(Model.Sanphamchinh.Picture)" alt="Product Image 1" />
+                        </div>
+                        <div class="product-img-item">
+                            <img src="data:image;base64,@System.Convert.ToBase64String(Model.Sanphamchinh.Picture2)" alt="Product Image 2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-7 col-md-12">
+                <div class="product-info">
+                    <h1>
+                        Mẫu Thiết Kế Áo Bóng Đá SM001
+                    </h1>
+                    <div class="product-info-detail">
+                        <span class="product-info-detail-title">Thương hiệu:</span>
+                        @Html.DisplayFor(model => model.Sanphamchinh.ThuonghieuObj.Name)
+                    </div>
+                    <div class="product-info-detail">
+                        <span class="product-info-detail-title">Danh mục:</span>
+                        @Html.DisplayFor(model => model.Sanphamchinh.DanhmucObj.Name)
+                    </div>
+                    <div class="product-info-detail">
+                        <span class="product-info-detail-title">Xếp hạng:</span>
+                        @Html.DisplayFor(model => model.Sanphamchinh.Rated)
+                        <span class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </span>
+                    </div>
+                    <div class="product-info-detail">
+                        <span class="product-info-detail-title">Còn lại:</span>
+                        @Html.DisplayFor(model => model.Sanphamchinh.Storage)
+                    </div>
+                    <div class="product-info-price">
+                        @Html.DisplayFor(model => model.Sanphamchinh.Price)
+                    </div>
+                    <div class="product-quantity-wrapper">
+                        <span class="product-quantity-btn">
+                            <i class='bx bx-minus'></i>
+                        </span>
+                        <span class="product-quantity">1</span>
+                        <span class="product-quantity-btn">
+                            <i class='bx bx-plus'></i>
+                        </span>
+                    </div>
+                    <div>
+                        <button class="btn-flat btn-hover">
+                            @Html.ActionLink("Thêm giỏ hàng", "Themvaogiohang", new { id = Model.Sanphamchinh.SpID })
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                Mô tả sản phẩm
+            </div>
+            <div class="product-detail-description">
+                <button class="btn-flat btn-hover btn-view-description" id="view-all-description">
+                    Xem tất cả
+                </button>
+                <div class="product-detail-description-content">
+                    @Html.DisplayFor(model => model.Sanphamchinh.Summary)<br />
+                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Sanphamchinh.Picture)" alt="Product Image 1" />
+                    <img src="data:image;base64,@System.Convert.ToBase64String(Model.Sanphamchinh.Picture2)" alt="Product Image 2" /><br />
+                    @Html.DisplayFor(model => model.Sanphamchinh.Summary)
+                </div>
+            </div>
+        </div>
+        <div class="box ">
+            <center><div class="box-header">Đánh giá</div></center>
+            <div>
+                <div class="row">
+                    <input type="text" id="name" placeholder="Nhập bình luận của bạn" required style="padding: 5px; width: 300px; border: 1px solid #ccc; border-radius: 5px; margin-right: 20px; box-sizing: border-box;">
+                    <button class="buy-button"  style="padding: 5px;"  type="submit">Gửi</button>
+
+                    <br><br>
+                </div>
+                <div class="user-rate">
+                    <div class="user-info">
+                        <div class="user-avt">
+                            <img src="~/Content/images/hà.jpg" />
+                        </div>
+                        <div class="user-name">
+                            <span class="name">Thanh Thu</span>
+                            <span class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-rate-content">
+                        đẹp, mát, thấm hút mồ hôi
+                    </div>
+                </div>
+                <div class="user-rate">
+                    <div class="user-info">
+                        <div class="user-avt">
+                            <img src="~/Content/images/hà.jpg" />
+                        </div>
+                        <div class="user-name">
+                            <span class="name">Anh thy</span>
+                            <span class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-rate-content">
+                        Đồ đẹp lắm, tuỵt
+                    </div>
+                </div>
+                <div class="user-rate">
+                    <div class="user-info">
+                        <div class="user-avt">
+                            <img src="~/Content/images/khoai.jpg" />
+                        </div>
+                        <div class="user-name">
+                            <span class="name">Thuy Vi</span>
+                            <span class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-rate-content">
+                        100000000000 điểm
+                    </div>
+                </div>
+                <div class="user-rate">
+                    <div class="user-info">
+                        <div class="user-avt">
+                            <img src="~/Content/images/chan.jpg" />
+                        </div>
+                        <div class="user-name">
+                            <span class="name">Ha My</span>
+                            <span class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-rate-content">
+                        Đồ đẹp lắm, mua cho bồ mà bồ mừng khóc
+                    </div>
+                </div>
+                <div class="user-rate">
+                    <div class="user-info">
+                        <div class="user-avt">
+                            <img src="~/Content/images/hà.jpg" />
+                        </div>
+                        <div class="user-name">
+                            <span class="name">Bao Hien</span>
+                            <span class="rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="user-rate-content">
+                        cũng ok
+                    </div>
+                </div>
+                <div class="box">
+                    <ul class="pagination">
+                        <li><a href="#"><i class='bx bxs-chevron-left'></i></a></li>
+                        <li><a href="#" class="active">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class='bx bxs-chevron-right'></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                Có thể bạn sẽ thích
+            </div>
+            <div class="row">
+                @foreach (var item in Model.Sanphamlienquans)
+                {
+                    <div class="product-card">
+                        <div class="product-card-img">
+                            <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture)" alt="Product Image 1" />
+                            <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture2)" alt="Product Image 2" />
+                        </div>
+                        <div class="product-card-info">
+                            <div class="product-btn">
+                                <button class="btn-flat btn-hover btn-shop-now">
+                                    @Html.ActionLink("Xem ngay", "Chitietsanpham", new { id = item.SpID })
+                                </button>
+                                <button class="btn-flat btn-hover btn-cart-add">
+                                    <i class='bx bxs-cart-add'></i>
+                                </button>
+                                <button class="btn-flat btn-hover btn-cart-add">
+                                    <i class='bx bxs-heart'></i>
+                                </button>
+                            </div>
+                            <div class="product-card-name">
+                                @Html.DisplayFor(modelItem => item.ProductName)
+                            </div>
+                            <div class="product-card-price">
+                                <span class="curr-price">@Html.DisplayFor(modelItem => item.Price)</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/js/app.js"></script>
+<script src="~/Scripts/js/product-detail.js"></script>
+<!-- end product-detail content -->

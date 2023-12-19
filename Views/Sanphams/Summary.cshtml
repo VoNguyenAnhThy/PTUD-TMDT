@@ -1,0 +1,23 @@
+﻿@model S_me.Models.Donhang
+
+@{
+    ViewBag.Title = "Summary";
+}
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<h2>Summary</h2>
+
+<center>
+    <div class="navbar-right">
+        <button class="buy-button">
+            @Html.ActionLink("Thanh toán ", "Thanhtoan", "Sanphams",
+    </ div > new { @class = "btn btn-default navbar-btn" })
+        </button>
+        <div class="navbar-text navbar-right">
+            <b>Giỏ hàng của bạn:</b>
+            @Model.Chitietdonhangs.Sum(x => x.Soluong) sản phẩm,
+            @Model.TongTien.ToString("c")
+        </div>
+    </div>
+

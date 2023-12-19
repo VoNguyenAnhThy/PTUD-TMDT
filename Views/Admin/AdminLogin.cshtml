@@ -1,0 +1,44 @@
+﻿@model S_me.Models.Admin
+
+@{
+    ViewBag.Title = "AdminDangnhap";
+}
+
+<link href="~/Content/css/sign-in.css" rel="stylesheet" />
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+
+
+<main aria-labelledby="title" style="padding-bottom:100px">
+    <center>
+        <h2 id="title">Đăng nhập Admin</h2>
+        <div class="row login-container">
+            <div class=" login-img col-5  col-md-12">
+                <img src="~/Content/images/15.png" />
+            </div>
+            <div class="login col-7 col-md-12">
+                <section id="loginForm" style="padding-bottom:20px">
+                    @using (Html.BeginForm("AdminLogin", "Admin", FormMethod.Post, new { @class = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div>
+                            <h2 style="padding:40px;">Đăng nhập</h2>
+                            @Html.TextBoxFor(m => m.UserAdmin, new { placeholder = "Tên đăng nhập" })
+                            @Html.PasswordFor(m => m.PassAdmin, new { placeholder = "Mật khẩu" })
+                            <div style="color:red;">
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class=" offset-md-2 col-md-10">
+                            <input type="submit" value="Đăng nhập" class="button" />
+                        </div>
+                    }
+                </section>
+                <button class="buy-button offset-md-2 col-md-10">
+                    @Html.ActionLink("Đăng nhập khách", "Login", "Account")
+                </button>
+            </div>
+        </div>
+    </center>
+</main>
+

@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Net;
+using System.Web;
+using System.Web.Mvc;
+using S_me.Models;
+
+namespace S_me.Controllers
+{
+    public class FormsController : Controller
+    {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
+        // GET: Forms
+        public ActionResult Index()
+        {
+            return View(db.Forms.ToList());
+        }
+
+        
+    }
+}

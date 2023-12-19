@@ -1,0 +1,41 @@
+﻿@model S_me.Models.Danhmuc
+
+@{
+    ViewBag.Title = "DMXoa";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+<center>
+    <br>
+    <h2>Xóa danh mục</h2>
+
+    <h3>Chắc chắn xóa?</h3>
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default buy-button" /> |
+                <button class="buy-button">
+                    @Html.ActionLink("Back to List", "QLDanhmuc")
+                </button>            
+            </div>
+        }
+    </div>
+</center>

@@ -1,0 +1,32 @@
+﻿@model S_me.Models.Danhmuc
+
+@{
+    ViewBag.Title = "DMChitiet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    <link href="~/Content/css/Product.css" rel="stylesheet" />
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+    <link href="~/Content/css/Admin.css" rel="stylesheet" />
+}
+<center>
+    <br>
+    <h2>Chi tiết danh mục</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <button class="buy-button">@Html.ActionLink("Edit", "DMSua", new { id = Model.DMID }) </button>
+        <button class="buy-button">
+            @Html.ActionLink("Back to List", "QLDanhmuc")
+        </button>    </p>
+</center>

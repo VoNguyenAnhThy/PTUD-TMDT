@@ -1,0 +1,269 @@
+﻿@model IEnumerable<S_me.Models.Sanpham>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm</title>
+    <link href="~/Content/css/Product.css" rel="stylesheet" />
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+    <link href="~/Content/css/grid.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="bg-main">
+        <div class="container">
+            <div class="box">
+                <div class="breadcumb">
+                    @Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    <span><i class='bx bxs-chevrons-right'></i></span>
+                    @Html.ActionLink("Tất cả sản phẩm", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                </div>
+            </div>
+            <div class="box">
+                <div class="row">
+                    <div class="col-3 filter-col" id="filter-col">
+                        <div class="box filter-toggle-box">
+                            <button class="btn-flat btn-hover" id="filter-close">Đóng</button>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Danh mục sản phẩm
+                            </span>
+                            <ul class="filter-list">
+                                <li><a href="#">Áo bóng đá</a></li>
+                                <li><a href="#">Áo bóng rổ</a></li>
+                                <li><a href="#">Áo cầu lông</a></li>
+                                <li><a href="#">Áo bóng chuyền</a></li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Giá cả
+                            </span>
+                            <div class="price-range">
+                                <input type="text">
+                                <span>-</span>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <ul class="filter-list">
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="status1">
+                                        <label for="status1">
+                                            Giảm giá
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="status2">
+                                        <label for="status2">
+                                            Còn hàng
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="status3">
+                                        <label for="status3">
+                                            Featured
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Màu sắc
+                            </span>
+                            <ul class="filter-list">
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            Đỏ
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember2">
+                                        <label for="remember2">
+                                            Cam
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember3">
+                                        <label for="remember3">
+                                            Vàng
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember4">
+                                        <label for="remember4">
+                                            Xanh lá
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember5">
+                                        <label for="remember5">
+                                            Xanh biển
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Xếp hạng
+                            </span>
+                            <ul class="filter-list">
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-9 col-md-12">
+                        <div class="box filter-toggle-box">
+                            <button class="btn-flat btn-hover" id="filter-toggle">filter</button>
+                        </div>
+                        <div class="product-container row">
+                            @foreach (var item in Model)
+                            {                               
+                                <div class="product-card">
+                                    <div class="product-card-img">
+                                        <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture)" alt="Product Image 1" />
+                                        <img src="data:image;base64,@System.Convert.ToBase64String(item.Picture2)" alt="Product Image 2" />
+                                    </div>
+                                    <div class="product-card-info">
+                                        <div class="product-btn">
+                                            <button class="btn-flat btn-hover btn-shop-now">
+                                                @Html.ActionLink("Xem ngay", "Chitietsanpham", new { id = item.SpID })
+                                            </button>
+                                            <button class="btn-flat btn-hover btn-cart-add">
+                                                <a href="@Url.Action("Themvaogiohang", new { id = item.SpID })"><i class='bx bxs-cart-add'></i></a>
+                                            </button>
+                                            <button class="btn-flat btn-hover btn-cart-add">
+                                                <i class='bx bxs-heart'></i>
+                                            </button>
+                                        </div>
+                                        <div class="product-card-name">
+                                            @Html.DisplayFor(modelItem => item.ProductName)
+                                        </div>
+                                        <div class="product-card-price">
+                                            <span class="curr-price">@Html.DisplayFor(modelItem => item.Price)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="box">
+                            <ul class="pagination">
+                                <li><a href="#"><i class='bx bxs-chevron-left'></i></a></li>
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class='bx bxs-chevron-right'></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/js/index.js"></script>
+    <script src="~/Scripts/js/app.js"></script>
+</body>
+</html>

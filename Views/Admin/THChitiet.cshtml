@@ -1,0 +1,35 @@
+﻿@model S_me.Models.Thuonghieu
+
+@{
+    ViewBag.Title = "THChitiet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+<link href="~/Content/css/Product.css" rel="stylesheet" />
+<link href="~/Content/css/index.css" rel="stylesheet" />
+<link href="~/Content/css/Admin.css" rel="stylesheet" />
+<center>
+    <h2>Chi tiết thương hiệu</h2>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        <button class="buy-button">
+            @Html.ActionLink("Edit", "THSua", new { id = Model.ThuonghieuID }) |
+        </button>
+        <button class="buy-button">
+            @Html.ActionLink("Back to List", "QLThuonghieu")
+        </button>    
+    </p>
+</center>

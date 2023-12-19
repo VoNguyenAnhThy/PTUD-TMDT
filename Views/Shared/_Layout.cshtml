@@ -1,0 +1,276 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-me Shop</title>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css -->
+    <link href="~/Content/css/grid.css" rel="stylesheet" />
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+</head>
+<body>
+
+
+    <!-- header -->
+    <nav>
+        <header style=" top:0px;width:100%; z-index:100;">
+            <!-- mobile menu -->
+            <div class="mobile-menu bg-second">
+                <div class="mb-logo">
+                    @Html.ActionLink("S-me", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                </div>
+                <span class="mb-menu-toggle" id="mb-menu-toggle">
+                    <i class='bx bx-menu'></i>
+                </span>
+            </div>
+            <!-- hết mobile menu -->
+            <!-- header chính -->
+            <div class="header-wrapper" id="header-wrapper">
+                <span class="mb-menu-toggle mb-menu-close" id="mb-menu-close">
+                    <i class='bx bx-x'></i>
+                </span>
+                <!-- header trên -->
+                <div class="bg-second">
+                    <div class="top-header container">
+                        <ul class="devided">
+                            <li>
+                                <a href="#">+840123456789</a>
+                            </li>
+                            <li>
+                                <a href="#">sme@gmail.com</a>
+                            </li>
+                        </ul>
+                        <ul class="devided">
+                            <li class="dropdown">
+                                <a href="">USD</a>
+                                <i class='bx bxs-chevron-down'></i>
+                                <ul class="dropdown-content">
+                                    <li><a href="#">VND</a></li>
+                                    <li><a href="#">JPY</a></li>
+                                    <li><a href="#">EUR</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="">ENGLISH</a>
+                                <i class='bx bxs-chevron-down'></i>
+                                <ul class="dropdown-content">
+                                    <li><a href="#">VIETNAMESE</a></li>
+                                    <li><a href="#">JAPANESE</a></li>
+                                    <li><a href="#">FRENCH</a></li>
+                                    <li><a href="#">SPANISH</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">ORDER TRACKING</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- hết header trên -->
+                <!-- header giữa -->
+                <div class="bg-main">
+                    <div class="mid-header container">
+                        <div class="logo">
+                            @Html.ActionLink("S-me", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        </div>                        
+                        <div class="search">
+                            <input type="text" placeholder="Tìm kiếm">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                        <ul class="user-menu">
+                            <li><a href="#"><i class='bx bx-bell'></i></a></li>
+                            <li><a href="@Url.Action("Login","Account", new { area = "" })"><i class='bx bx-user-circle'></i></a></li>
+                            <li><a href="#"><i class='bx bx-cart'></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- hết header giữa -->
+                <!-- header dưới -->
+                <div class="bg-second">
+                    <div class="bottom-header container">
+                        <ul class="main-menu">
+                            <li>@Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                            <!-- mega menu -->
+                            <li class="mega-dropdown">
+                                @*<a href="./products.html">Cửa Hàng<i class='bx bxs-chevron-down'></i></a>*@
+                            @Html.ActionLink("Cửa hàng", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })
+                            <div class="mega-content">
+                                <div class="row">
+                                    <div class="col-3 col-md-12">
+                                        <div class="box">
+                                            <h3>Tennis</h3>
+                                            <ul>
+                                                <li><a href="#">Đồ Nữ</a></li>
+                                                <li><a href="#">Đồ Nam</a></li>
+                                                <li><a href="#">Đồ Trẻ Em</a></li>
+                                                <li><a href="#">Đồ Thiết Kế</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-md-12">
+                                        <div class="box">
+                                            <h3>Bóng Chuyền</h3>
+                                            <ul>
+                                                <li><a href="#">Đồ Nữ</a></li>
+                                                <li><a href="#">Đồ Nam</a></li>
+                                                <li><a href="#">Đồ Trẻ Em</a></li>
+                                                <li><a href="#">Đồ Thiết Kế</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-md-12">
+                                        <div class="box">
+                                            <h3>Esport</h3>
+                                            <ul>
+                                                <li><a href="#">Đồ Nữ</a></li>
+                                                <li><a href="#">Đồ Nam</a></li>
+                                                <li><a href="#">Đồ Trẻ Em</a></li>
+                                                <li><a href="#">Đồ Thiết Kế</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-md-12">
+                                        <div class="box">
+                                            <h3>Bóng Rổ</h3>
+                                            <ul>
+                                                <li><a href="#">Đồ Nữ</a></li>
+                                                <li><a href="#">Đồ Nam</a></li>
+                                                <li><a href="#">Đồ Trẻ Em</a></li>
+                                                <li><a href="#">Đồ Thiết Kế</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row img-row">
+                                    <div class="col-3">
+                                        <div class="box">
+                                            <img src="~/Content/images/DM.Tennis.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="box">
+                                            <img src="~/Content/images/DM.BC.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="box">
+                                            <img src="~/Content/images/14. Esport.remove.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="box">
+                                            <img src="~/Content/images/DM.BR.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </li>
+                            <!-- hết mega menu -->
+                            <li>@Html.ActionLink("Về chúng tôi", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Liên hệ", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Tài khoản", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Giỏ hàng", "Themvaogiohang", "Sanphams", new { area = "" }, new { @class = "nav-link" })</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- hết header dưới -->
+            </div>
+            <!-- hết header chính -->
+        </header>
+        <!-- hết header -->
+    </nav>
+    @RenderBody()
+    <!-- footer -->
+    <br><br>
+    <footer class="bg-second">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-md-6">
+                    <h3 class="footer-head">Danh mục sản phẩm</h3>
+                    <ul class="menu">
+                        <li><a href="#">Bóng rổ</a></li>
+                        <li><a href="#">Bóng chuyền</a></li>
+                        <li><a href="#">Bơi lội</a></li>
+                        <li><a href="#">Cầu lông</a></li>
+                        <li><a href="#">Gym</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 col-md-6">
+                    <h3 class="footer-head">Trang</h3>
+                    <ul class="menu">
+                        <li>@Html.ActionLink("S-me", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Cửa hàng", "Index", "Sanphams", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Về chúng tôi", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Liên hệ", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Tài khoản", "Login", "Account", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+                </div>
+                <div class="col-3 col-md-6">
+                    <h3 class="footer-head">Hỗ trợ</h3>
+                    <ul class="menu">
+                        <li><a href="#">Tổng đài</a></li>
+                        <li><a href="#">Thông tin liên hệ</a></li>
+                        <li><a href="#">Hỏi đáp sản phẩm</a></li>
+                        <li><a href="#">Bảo hành</a></li>
+                        <li><a href="#">Theo dõi đơn hàng</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 col-md-6 col-sm-12">
+                    <div class="contact">
+                        <h3 class="contact-header">
+                            @Html.ActionLink("S-me", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </h3>
+                        <ul class="contact-socials">
+                            <li>
+                                <a href="#">
+                                    <i class='bx bxl-facebook-circle'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='bx bxl-instagram-alt'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='bx bxl-youtube'></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class='bx bxl-twitter'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subscribe">
+                        <input type="email" placeholder="Nhập email của bạn">
+                        <button>Nhận thông tin</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <center><p>&copy; @DateTime.Now.Year - Powered by S-me Shop</p></center>
+        </div>
+    </footer>
+    <!-- end footer -->
+    @*<hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/js/index.js"></script>
+    <script src="~/Scripts/js/app.js"></script>
+</body>
+</html>
